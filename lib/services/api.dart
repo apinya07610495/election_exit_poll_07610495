@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:flutter_food/models/api_result.dart';
+import 'package:election_exit_poll_07610495/models/api_result.dart';
 import 'package:http/http.dart' as http;
 
 class Api {
@@ -42,7 +42,7 @@ class Api {
     String queryString = Uri(queryParameters: queryParams).query;
     var url = Uri.parse('$BASE_URL/$endPoint?$queryString');
 
-    final response = await http.get(url);
+    final response = await http.get(url,headers:{'id':'07610495'});
 
     if (response.statusCode == 200) {
       // แปลง text ที่มีรูปแบบเป็น JSON ไปเป็น Dart's data structure (List/Map)
