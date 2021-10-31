@@ -1,0 +1,2 @@
+rootProject.name = "election_exit_poll_07610495"
+include ':app'
